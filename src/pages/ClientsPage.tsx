@@ -14,7 +14,7 @@ export default function ClientsPage() {
     setLoading(true);
     setError('');
     ClientsService.getClients()
-      .then(data => { if (active) setClients(data ?? []); })
+      .then(data => { if (active) { setClients(data ?? []); console.info("Conexión correcta con Supabase"); console.table(data ?? []); } })
       .catch(() => { if (active) setError('No se pudieron cargar los clientes. Comprueba la conexión e inténtalo de nuevo.'); })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
@@ -36,3 +36,4 @@ export default function ClientsPage() {
     </section>
   );
 }
+
