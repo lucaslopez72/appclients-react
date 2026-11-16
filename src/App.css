@@ -1,0 +1,28 @@
+:root { --app-accent: #17634c; --app-border: #dce5e0; --app-ink: #20362c; }
+.clients-app { height: 100%; overflow-y: auto; background: #f5f7f5; color: var(--app-ink); display: flex; flex-direction: column; }
+.app-header { background: white; border-bottom: 1px solid var(--app-border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: 1.25rem; padding-bottom: 1.25rem; flex-wrap: wrap; }
+.app-brand { color: var(--app-ink); text-decoration: none; font-size: 1.5rem; font-weight: 750; }
+.app-brand span { display: block; color: #617067; font-size: .8rem; font-weight: 400; }
+.app-nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.app-nav a { color: #455b50; padding: .75rem 1rem; text-decoration: none; border-radius: .375rem; }
+.app-nav a.active { background: #e6f1eb; color: #134d3b; font-weight: 700; box-shadow: inset 0 -3px var(--app-accent); }
+.app-nav a:hover { background: #edf3ef; }
+.app-main { padding-top: 3rem; padding-bottom: 3rem; flex: 1; }
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -.04rem; }
+h2 { font-size: 1.4rem; }
+.eyebrow { color: var(--app-accent); font-size: .75rem; letter-spacing: .12rem; font-weight: 700; margin-bottom: .75rem; }
+.page-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.surface, .empty-state { background: white; border: 1px solid var(--app-border); border-radius: .5rem; }
+.empty-state { padding: 3rem 1.5rem; text-align: center; }
+.table > :not(caption) > * > * { padding: 1rem; }
+.table thead th { background: #edf3ef; color: #455b50; }
+.btn-primary, .btn-success { --bs-btn-bg: var(--app-accent); --bs-btn-border-color: var(--app-accent); --bs-btn-hover-bg: #104b39; --bs-btn-hover-border-color: #104b39; --bs-btn-active-bg: #104b39; --bs-btn-active-border-color: #104b39; }
+.client-form { max-width: 40rem; }
+.form-label { font-weight: 600; }
+.form-control { min-height: 3rem; }
+.app-footer { padding-bottom: 1.5rem; color: #617067; font-size: .85rem; }
+.skip-link { position: absolute; left: -10000px; }
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 10; background: white; padding: 1rem; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--app-accent); outline-offset: 3px; }
+@media (max-width: 575px) { .app-main { padding-top: 2rem; } .app-nav { width: 100%; gap: .25rem; } .app-nav a { padding: .75rem .5rem; font-size: .9rem; } }
